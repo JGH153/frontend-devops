@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Angular Complete Setup</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="product-colors.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+
+    <style>
+      /* only for prez, not for speaker view */
+      @media screen and (min-width: 1500px) {
+        .slides {
+          width: 88% !important;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-transform: none !important;
+      }
+
+      ol,
+      ul {
+        font-size: 150%;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      .opacity-hidden {
+        opacity: 0;
+      }
+
+      .npm-script {
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        background: #272822;
+        text-align: left;
+        font-family: monospace;
+        text-transform: none;
+        font-size: 30px;
+        width: 89%;
+        margin: auto;
+        padding: 2px 6px;
+        margin-bottom: 5px;
+      }
+
+      .npm-script .ng {
+        color: #cb3837;
+      }
+      .npm-script .args {
+        color: #767676;
+      }
+
+      .smaller {
+        font-size: 50%;
+      }
+      .bigger {
+        font-size: 150%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 style="margin-bottom: 110px">Frontend Dev-Ops ⚙️</h1>
+          <h2 class="fragment">What is Dev-Ops?</h2>
+          <h2 class="fragment">What does it mean for the Frontend?</h2>
+        </section>
+
+        <section>
+          It's about creating better software faster Go hand in hand with Adgile
+          To get a shorter Systems development life cycle
+        </section>
+
+        <section>
+          <section>The problem</section>
+          <section>
+            Big and infrequant deployments Just fixed a bug just after deploy to
+            prod? Have to waith to next one in a mounth Long time to you know if
+            users like a new feature More changes at the same time can interfeer
+            with eachother
+          </section>
+          <section>
+            Manual deploys are error prone Forget something everytime How fast
+            can you do it? Under stress?
+          </section>
+          <section>Long living branches cause merge hell</section>
+          <section>
+            Production is someone elses problem! Have to talk to a different
+            company to deploy A lack of responsibility, and control
+          </section>
+        </section>
+
+        <section>
+          <section>
+            The solution
+            Dev-Ops
+          </section>
+          <section>
+            Dev-Ops is a process, not a goal Merger of Development and Operations
+            One makes the initial application One gets it to production Merge them
+            togheter, Dev-Ops Mot nessesarily same persion
+          </section>
+          <section>
+            Dev-Ops is a fluint term, and moving target Many do a few elements and
+            call it devops
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            The elements of devops
+            ever changing
+            My experience is more on dev than ops side
+          </section>
+          <section>
+            Continuous Integration (CI)
+            Merge to master often
+            Trunk
+          </section>
+          <section>
+            Continuous Delivery (CD)
+            Publish to prod on each merge
+            Github Actions
+          </section>
+          <section>
+            Microservices
+            Many small backend services
+            Microfrontends
+            Still new
+          </section>
+          <section>
+            Infrastructure as Code
+            Config files and automation of infrastructure
+            Terraform
+          </section>
+          <section>
+            Monitoring and Logging
+            Know instantly when something went wrong in prod and be able to understand it after it happened.
+          </section>
+          <section>
+            Communication and Collaboration
+            Have teams talk to each other, and document things.
+          </section>
+          <section>
+            Continuous feedback
+            Use feedback from production to influence future development
+          </section>
+          <section>
+            Summary
+            Continuous Integration (CI)
+            Continuous Delivery (CD)
+            Microservices
+            Infrastructure as Code
+            Monitoring and Logging
+            Communication and Collaboration
+            Continuous feedback
+          </section>
+        </section>
+
+        <section>
+          <section>
+            My dream setup
+            My gold standard, but real world might require deviation 
+          </section>
+          <section>
+            Only hire people you trust
+            Then give them the keys to the castle
+            Autonomous teams
+            With Accountability
+          </section>
+          <section>
+            Git with Trunk-Based Development
+            Main(Master) bransh only, no dev
+            Short lived branshes(few days or less)
+            Main is stable
+          </section>
+          <section>
+            PR for everything
+            Only merge Potentially shippable software
+            Feature flags for larger elements across PR's
+            Lots of auto checks on PR (unit, e2e)
+            Deploy PR to temp staging enviorment for visuall cheks (automaticly)
+            Each PR is reviewed for code quality AND bugs + design
+          </section>
+          <section>
+            Push merged PR directly to prod
+            So only merge when everyone is happy
+            Needs to be automatic
+            For ex Github Actions
+          </section>
+          <section>
+            Monitor production
+          </section>
+          <section>
+            Use data from production to influence future development
+          </section>
+          <section>
+            Use Kanban
+            Works better with Continuous Delivery
+          </section>
+          <section>
+            Go cloud and serverless
+            Infrastructure as Code (IaC)
+            Infrastructure as a service (IaaS) 
+          </section>
+          <section>
+            Have a boss that trust you, and the team
+          </section>
+          <section>
+            Remember that code and infrastructure is just a tool for solving problems
+          </section>
+        </section>
+
+        <section>
+          Challenges of devops
+          Each element is not as important as the rest
+          Some benefits are not obvious
+          Devops will not fix a bad company, or culture
+        </section>
+
+        <section>
+          Testing is key
+          But what should you test?
+        </section>
+
+        <section>
+          Tips n trics?
+        </section>
+
+
+
+        
+
+        <section>
+          Exsist toolks for each step
+          https://www.atlassian.com/devops/what-is-devops
+        </section>
+
+        <section>
+          <h1>Ready to go 🚀</h1>
+          <!-- <h1 class="fragment">Thanks for watching</h1>
+          <h1 class="fragment">Leave a comment</h1> -->
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        history: true,
+        controls: false,
+        progress: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      Reveal.addEventListener("fragmentshown", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.add("fade-in");
+          });
+        }
+      });
+      Reveal.addEventListener("fragmenthidden", function (event) {
+        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+          Array.from(event.fragment.children).forEach((current) => {
+            current.classList.remove("fade-in");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
