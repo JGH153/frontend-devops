@@ -73,16 +73,25 @@
       blockquote {
         padding: 5px 15px !important;
       }
+
+
     </style>
     <link rel="stylesheet" href="css-ani/fluid.css" />
     <link rel="stylesheet" href="css-ani/pulse-right.css" />
+    <link rel="stylesheet" href="css-ani/blur-in.css" />
+    <link rel="stylesheet" href="css-ani/zoom-in-fast.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <!-- https://bennettfeely.com/clippy/ -->
         <section>
-          <h1 style="">Frontend <span class="devops">Dev-Ops</span></h1>
+          <div class="fragment addClassBelow" data-add-class="zoom-in-fast">
+            <h1 class="">
+              Frontend <span class="devops">Dev-Ops</span>
+            </h1>
+
+          </div>
           <h2 class="fragment">What is <span class="devops">Dev-Ops</span>?</h2>
           <h2 class="fragment">What does it mean for the Frontend?</h2>
           <!-- 👨‍💻 + 👷 -->
@@ -96,7 +105,11 @@
         </section>
 
         <section>
-          <section><h1>The problem</h1></section>
+          <section>
+            <div class="addClassBelow fragment" data-add-class="blur-in">
+              <h1 class="">The problem</h1>
+            </div>
+          </section>
           <section>
             <h2>Big, and infrequent deployments</h2>
             <h2 class="fragment">One deploy a month</h2>
@@ -134,7 +147,9 @@
 
         <section>
           <section>
-            <h1>The solution</h1>
+            <div class="addClassBelow fragment" data-add-class="blur-in">
+              <h1 class="">The solution</h1>
+            </div>
             <h1 class="fragment"><span class="devops">Dev-Ops</span></h1>
             <h1 class="fragment">👨‍💻 + 👷</h1>
           </section>
@@ -350,16 +365,20 @@
       });
 
       Reveal.addEventListener("fragmentshown", function (event) {
-        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+        if (event.fragment.classList.value.includes("addClassBelow")) {
           Array.from(event.fragment.children).forEach((current) => {
-            current.classList.add("fade-in");
+            current.classList.add(
+              event.fragment.getAttribute("data-add-class")
+            );
           });
         }
       });
       Reveal.addEventListener("fragmenthidden", function (event) {
-        if (event.fragment.classList.value.includes("addFadeinBelow")) {
+        if (event.fragment.classList.value.includes("addClassBelow")) {
           Array.from(event.fragment.children).forEach((current) => {
-            current.classList.remove("fade-in");
+            current.classList.remove(
+              event.fragment.getAttribute("data-add-class")
+            );
           });
         }
       });
