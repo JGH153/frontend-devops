@@ -184,6 +184,27 @@
 .feature {
   color: #25A9FA !important;
 }
+.terraform {
+  color: #623CE4 !important;
+}
+.application-insights {
+  color: #7030A0 !important;
+}
+.confluence {
+  color: #0049B0 !important;
+}
+.slack {
+  color: #4A154B !important;
+}
+.gold {
+  color: #FFD700 !important;
+}
+.trust {
+  color: #1C3BE9 !important;
+}
+.castle {
+  color: #7C7C7C !important;
+}
 
 .interference, .error {
   color: #FF0908 !important;
