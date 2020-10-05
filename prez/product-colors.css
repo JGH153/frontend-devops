@@ -177,3 +177,14 @@
   /* https://www.color-hex.com/color-palette/30628 */
   color: #6293c9 !important;
 }
+
+.bug {
+  color: #E3483A !important;
+}
+.feature {
+  color: #25A9FA !important;
+}
+
+.interference, .error {
+  color: #FF0908 !important;
+}

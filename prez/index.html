@@ -76,19 +76,25 @@
       .bigger {
         font-size: 150%;
       }
+
+
     </style>
+    <link rel="stylesheet" href="css-ani/fluid.css">
+    <link rel="stylesheet" href="css-ani/pulse-right.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1 style="">Frontend <span class="devops">Dev-Ops</span> ⚙️</h1>
+          <h1 style="">Frontend <span class="devops">Dev-Ops</span></h1>
           <h2 class="fragment">What is <span class="devops">Dev-Ops</span>?</h2>
           <h2 class="fragment">What does it mean for the Frontend?</h2>
+          <!-- 👨‍💻 + 👷 -->
         </section>
 
         <section>
-          <h2>Creating better software faster</h2>
+          <h2>Creating better software, faster</h2>
+          <img class="fragment" src="img/devops.png" />
           <h2 class="fragment">Go hand in hand with Agile</h2>
           <h2 class="fragment">Shorter development cycle</h2>
         </section>
@@ -96,91 +102,116 @@
         <section>
           <section><h1>The problem</h1></section>
           <section>
-            <h1>Big and infrequent deployments</h1>
-            <h2>One deploy a month</h2>
-            <h2>One month to bugfix</h2>
-            <h2>Slow to get feedback on feature</h2>
-            <h2>Deployment interference</h2>
+            <h2>Big, and infrequent deployments</h2>
+            <h2 class="fragment">One deploy a month</h2>
+            <h2 class="fragment">
+              One month to <span class="bug">bugfix</span>
+            </h2>
+            <h2 class="fragment">
+              Slow to get feedback on <span class="feature">feature</span>
+            </h2>
+            <h2 class="fragment">
+              Deployment <span class="interference">interference</span>
+            </h2>
           </section>
           <section>
-            <h2>Manual deploys are error prone</h2>
-            <h2>Forget something every time</h2>
-            <h2>How fast can you do it?</h2>
-            <h1>Under stress?</h1>
+            <h2>Manual deploys are <span class="error">error</span> prone</h2>
+            <h2 class="fragment">Forget something <i>every</i> time</h2>
+            <h2 class="fragment">How fast can you do it?</h2>
+            <h1 class="fragment">Under <span class="error">stress</span>?</h1>
           </section>
           <section>
-            <h1>Long living branches</h1>
-            <h1>Cause merge hell</h1>
+            <h1><span>Long</span> living branches</h1>
+            <h1 class="fragment">
+              Cause merge <span class="error">hell</span>
+            </h1>
           </section>
           <section>
-            <h2>Production is someone elses problem!</h2>
-            <h1>Different company deploys</h1>
-            <h1>A lack of accountability</h1>
-            <h1>And control</h1>
+            <h2>
+              Production is someone else's <span class="error">problem</span>!
+            </h2>
+            <h1 class="fragment">Different company deploys</h1>
+            <h1 class="fragment">A lack of accountability</h1>
+            <h1 class="fragment">And control</h1>
           </section>
         </section>
 
         <section>
           <section>
             <h1>The solution</h1>
-            <h2>Dev-Ops</h2>
+            <h1 class="fragment"><span class="devops">Dev-Ops</span></h1>
+            <h1 class="fragment">👨‍💻 + 👷</h1>
           </section>
           <section>
-            <h1>A process, not a goal</h1>
-            <h2>Development + Operations</h2>
-            <h2>One makes the application</h2>
-            <h2>One gets it to production</h2>
+            <h1>A process, <i>not</i> a goal 🥅</h1>
+            <h2 class="fragment">Development + Operations</h2>
+            <h2 class="fragment">One makes the application</h2>
+            <h2 class="fragment">One gets it to production</h2>
+            <h1 class="fragment">Merge them together</h1>
+          </section>
+          <section>
+            <h1><span class="devops">Dev-Ops</span></h1>
+            <div class="fluid-container fragment">
+              <h2>Fluid term</h2>
+              <h2>Fluid term</h2>
+            </div>
+            <div class="pulse-right-container fragment">
+              <h2>Moving target</h2>
+              <h2>Moving target</h2>
+            </div>
 
-            <h1>Merge them together</h1>
-          </section>
-          <section>
-            <h1>Dev-Ops</h1>
-            <h1>Fluid term, and moving target</h1>
-            <h1>Somewhat Dev-Ops</h1>
+            <!-- <h2>Moving target</h2> -->
+            <h1 class="fragment">
+              Somewhat <span class="devops">Dev-Ops</span>
+            </h1>
           </section>
         </section>
 
         <section>
           <section>
-            <h1>The elements of Dev-Ops</h1>
-            <h2>My experience is more on Dev side</h2>
+            <h1>The elements of <span class="devops">Dev-Ops</span></h1>
+            <h2 class="fragment">My experience is more on Dev side</h2>
           </section>
           <section>
             <h1>Continuous Integration (CI)</h1>
-            <h1>Merge to master/main often</h1>
-            <h1>Trunk</h1>
+            <h1 class="fragment">Merge to master/main often</h1>
+            <h1 class="fragment">Trunk</h1>
           </section>
           <section>
             <h1>Continuous Delivery (CD)</h1>
-            <h1>Publish to prod on each merge</h1>
-            <h1>Github Actions</h1>
+            <h1 class="fragment">Publish to prod on each merge</h1>
+            <h1 class="fragment">Github Actions</h1>
           </section>
           <section>
             <h1>Microservices</h1>
-            <h1>Many small backend services</h1>
-            <h1>Microfrontends</h1>
-            <h1>Still new</h1>
+            <h1 class="fragment">Many small backend services</h1>
+            <h1 class="fragment">Microfrontends</h1>
+            <h1 class="fragment">Still new</h1>
           </section>
           <section>
             <h1>Infrastructure as Code</h1>
-            <h2>Config files and automation of infrastructure</h2>
-            <h1>Terraform</h1>
-            <h1>Infrastructure in Git</h1>
+            <h2 class="fragment">
+              Config files and automation of infrastructure
+            </h2>
+            <h1 class="fragment">Terraform</h1>
+            <h1 class="fragment">Infrastructure in Git</h1>
           </section>
           <section>
             <h1>Monitoring and Logging</h1>
-            <h4>
+            <h4 class="fragment">
               Know instantly when something went wrong in prod and be able to
               understand it after it happened.
             </h4>
           </section>
           <section>
             <h1>Communication and Collaboration</h1>
-            <h1>Have teams talk to each other, and document things.</h1>
+            <h1 class="fragment">
+              Have teams talk to each other, and document things.
+            </h1>
           </section>
           <section>
             <h1>Continuous feedback</h1>
-            <h1>
+            <h1 class="fragment">
               Use feedback from production to influence future development
             </h1>
           </section>
@@ -189,13 +220,13 @@
               Summary
             </h1> -->
             <ol>
-              <li>Continuous Integration (CI)</li>
-              <li>Continuous Delivery (CD)</li>
-              <li>Microservices</li>
-              <li>Infrastructure as Code</li>
-              <li>Monitoring and Logging</li>
-              <li>Communication and Collaboration</li>
-              <li>Continuous feedback</li>
+              <li class="">Continuous Integration (CI)</li>
+              <li class="fragment">Continuous Delivery (CD)</li>
+              <li class="fragment">Microservices</li>
+              <li class="fragment">Infrastructure as Code</li>
+              <li class="fragment">Monitoring and Logging</li>
+              <li class="fragment">Communication and Collaboration</li>
+              <li class="fragment">Continuous feedback</li>
             </ol>
           </section>
         </section>
@@ -203,54 +234,54 @@
         <section>
           <section>
             <h1>Dream setup</h1>
-            <h2>My gold standard</h2>
-            <h2>Real world different</h2>
+            <h2 class="fragment">My gold standard</h2>
+            <h2 class="fragment">Real world different</h2>
           </section>
           <section>
             <h1>Hire people you trust</h1>
-            <h1>Keys to the castle</h1>
-            <h1>Autonomous teams</h1>
-            <h1>Accountability</h1>
+            <h1 class="fragment">Keys to the castle</h1>
+            <h1 class="fragment">Autonomous teams</h1>
+            <h1 class="fragment">Accountability</h1>
           </section>
           <section>
             <h1>Trunk-Based</h1>
-            <h1>Main branch only</h1>
-            <h1>Short lived branch</h1>
-            <h1>Main is stable</h1>
+            <h1 class="fragment">Main branch only</h1>
+            <h1 class="fragment">Short lived branch</h1>
+            <h1 class="fragment">Main is stable</h1>
           </section>
           <section>
             <h1>Pull request gate</h1>
-            <h1>Potentially shippable software</h1>
-            <h1>Feature flags</h1>
-            <h1>Lost of checks</h1>
-            <h1>Temp deploy</h1>
+            <h1 class="fragment">Potentially shippable software</h1>
+            <h1 class="fragment">Feature flags</h1>
+            <h1 class="fragment">Lost of checks</h1>
+            <h1 class="fragment">Temp deploy</h1>
             <!-- Lots of auto checks on PR (unit, Cypress (e2e))
             Deploy PR to temp staging enviorment for visuall cheks (automaticly)
             Each PR is reviewed for code quality AND bugs + design -->
           </section>
           <section>
             <h1>Directly to prod</h1>
-            <h1>Merge when everyone is happy</h1>
-            <h1>Automatic</h1>
-            <h1>Github Actions</h1>
+            <h1 class="fragment">Merge when everyone is happy</h1>
+            <h1 class="fragment">Automatic</h1>
+            <h1 class="fragment">Github Actions</h1>
             <!-- TODO scr sht -->
           </section>
           <section>
             <h1>Monitor production</h1>
-            <h1>Influence future development</h1>
+            <h1 class="fragment">Influence future development</h1>
           </section>
           <section>
-            <h1>Use Kanban</h1>
-            <h3>Works better with Continuous Delivery</h3>
+            <h1>Use <span class="Kanban">Kanban</span></h1>
+            <h3 class="fragment">Works better with Continuous Delivery</h3>
           </section>
           <section>
             <h1>Go cloud and serverless</h1>
-            <h1>Infrastructure as Code (IaC)</h1>
-            <h1>Infrastructure as a service (IaaS)</h1>
+            <h1 class="fragment">Infrastructure as Code (IaC)</h1>
+            <h1 class="fragment">Infrastructure as a service (IaaS)</h1>
           </section>
           <section>
             <h1>Trust</h1>
-            <h1>Team, boss, customer, users</h1>
+            <h1 class="fragment">Team, boss, customer, users</h1>
           </section>
           <section>
             <blockquote>
@@ -262,12 +293,11 @@
         </section>
 
         <section>
-          <h1>Challenges of Dev-Ops</h1>
-          <h2>Each element is not as important as the rest</h2>
-          <h2>Some benefits are not obvious</h2>
-          <h2>Don't know fully what works</h2>
-
-          <h2>Will not fix a toxic company, or culture</h2>
+          <h1>Challenges of <span class="devops">Dev-Ops</span></h1>
+          <h2 class="fragment">Each element is not as important as the rest</h2>
+          <h2 class="fragment">Some benefits are not obvious</h2>
+          <h2 class="fragment">Don't know fully what works</h2>
+          <h2 class="fragment">Will not fix a toxic company, or culture</h2>
         </section>
         <!-- 
         <section>
