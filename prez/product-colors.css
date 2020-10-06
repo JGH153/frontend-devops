@@ -200,10 +200,13 @@
   color: #FFD700 !important;
 }
 .trust {
-  color: #1C3BE9 !important;
+  color: #007acc !important;
 }
 .castle {
   color: #7C7C7C !important;
+}
+.toxic {
+  color: #61DF26 !important;
 }
 
 .interference, .error {

@@ -74,12 +74,36 @@
         padding: 5px 15px !important;
       }
 
+      .burning-text {
+        background-image: url(img/fire3.gif);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
+      .letter-spacing {
+        letter-spacing: 2rem;
+        animation: letter-spacing-ani 1s ease-out forwards;
+        animation-iteration-count: 1;
+      }
+
+      @keyframes letter-spacing-ani {
+        to {
+          letter-spacing: normal;
+        }
+      }
+
+      .stonewall {
+        background-image: url(img/rock2.jpg);
+        background-position: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
     <link rel="stylesheet" href="css-ani/fluid.css" />
-    <link rel="stylesheet" href="css-ani/pulse-right.css" />
+    <link rel="stylesheet" href="css-ani/arrow-right.css" />
     <link rel="stylesheet" href="css-ani/blur-in.css" />
     <link rel="stylesheet" href="css-ani/zoom-in-fast.css" />
+    <link rel="stylesheet" href="css-ani/pulse-right.css" />
   </head>
   <body>
     <div class="reveal">
@@ -87,19 +111,20 @@
         <!-- https://bennettfeely.com/clippy/ -->
         <section>
           <div class="fragment addClassBelow" data-add-class="zoom-in-fast">
-            <h1 class="">
-              Frontend <span class="devops">Dev-Ops</span>
-            </h1>
-
+            <h1 class="">Frontend <span class="devops">Dev-Ops</span></h1>
           </div>
           <h2 class="fragment">What is <span class="devops">Dev-Ops</span>?</h2>
           <h2 class="fragment">What does it mean for the Frontend?</h2>
           <!-- 👨‍💻 + 👷 -->
         </section>
 
+        <section data-background="img/pondus.jpg"></section>
+
         <section>
-          <h2>Creating better software, faster</h2>
-          <img class="fragment" src="img/devops.png" />
+          <h2>
+            Creating better software, <span class="pulse-right">faster</span>
+          </h2>
+          <img class="fragment" src="img/devops.png" style="max-width: 50%" />
           <h2 class="fragment">Go hand in hand with Agile</h2>
           <h2 class="fragment">Shorter development cycle</h2>
         </section>
@@ -132,17 +157,21 @@
           <section>
             <h1><span>Long</span> living branches</h1>
             <h1 class="fragment">
-              Cause merge <span class="error">hell</span>
+              Cause merge <span class="burning-text">hell</span>
             </h1>
           </section>
           <section>
             <h2>
               Production is someone else's <span class="error">problem</span>!
             </h2>
-            <h1 class="fragment">Different company deploys</h1>
+            <h2 class="fragment">Different company deploys</h2>
             <h1 class="fragment">A lack of accountability</h1>
             <h1 class="fragment">And control</h1>
           </section>
+          <!-- <section>
+            Adgile just fixed the development side
+            Not how to get it to production
+          </section> -->
         </section>
 
         <section>
@@ -158,7 +187,12 @@
             <h2 class="fragment">Development + Operations</h2>
             <h2 class="fragment">One makes the application</h2>
             <h2 class="fragment">One gets it to production</h2>
-            <h1 class="fragment">Merge them together</h1>
+            <h1
+              class="addClassBelow fragment"
+              data-add-class="letter-spacing"
+            >
+              <span>Merge</span> them together
+            </h1>
           </section>
           <section>
             <h1><span class="devops">Dev-Ops</span></h1>
@@ -166,7 +200,7 @@
               <h2>Fluid term</h2>
               <h2>Fluid term</h2>
             </div>
-            <div class="pulse-right-container fragment">
+            <div class="arrow-right-container fragment">
               <h2>Moving target</h2>
               <h2>Moving target</h2>
             </div>
@@ -184,17 +218,23 @@
             <h2 class="fragment"><i>My</i> experience is more on Dev side</h2>
           </section>
           <section>
-            <h1 style="font-size: 2.3em">Continuous Integration (CI)</h1>
-            <h2 class="fragment">Merge to master/main often</h2>
+            <h1 style="font-size: 2.3em">Continuous Integration (<span class="devops">CI</span>)</h1>
+            <h2
+              class="addClassBelow fragment"
+              data-add-class="letter-spacing"
+            >
+              <span>Merge</span> to master/main often
+            </h2>
             <h1 class="fragment">Trunk</h1>
           </section>
           <section>
-            <h1>Continuous Delivery (CD)</h1>
+            <h1>Continuous Delivery (<span class="devops">CD</span>)</h1>
             <h2 class="fragment">Publish to prod on each merge</h2>
             <h1 class="fragment github-actions">Github Actions</h1>
           </section>
+          <section data-background="img/deploy.png"></section>
           <section>
-            <h1>Microservices</h1>
+            <h4>Microservices</h4>
             <h2 class="fragment">Many small backend services</h2>
             <h1 class="fragment">Microfrontends</h1>
             <h1 class="fragment">Still new</h1>
@@ -207,14 +247,15 @@
             <h2 class="fragment" style="font-size: 1.5em">
               Config files + automation of infrastructure
             </h2>
+            <h1 class="fragment">Infrastructure in <span class="git">Git</span></h1>
             <h1 class="fragment terraform">Terraform</h1>
-            <h1 class="fragment">Infrastructure in Git</h1>
           </section>
           <section>
             <h1>Monitoring and Logging</h1>
-            <h4 class="fragment">
-              Know instantly when something went wrong in production, and be
-              able to understand it after it happened.
+            <h3 class="fragment">Know instantly of production issues</h3>
+            <h3 class="fragment">And be able to understand it after it happened</h3>
+              
+              
             </h4>
             <h1 class="fragment application-insights">Application Insights</h1>
           </section>
@@ -224,10 +265,10 @@
               & <br /><span class="confluence">Collaboration</span>
             </h1>
             <h3 class="fragment">Have teams talk to each other</h3>
-            <h3 class="fragment">Documentation</h3>
+            <h3 class="fragment">Documentation 📝</h3>
           </section>
           <section>
-            <h1>Continuous feedback</h1>
+            <h1>Continuous feedback 🔁</h1>
             <h3 class="fragment">
               Use feedback from production to influence future development
             </h3>
@@ -237,10 +278,10 @@
               Summary
             </h1> -->
             <ol>
-              <li class="">Continuous Integration (CI)</li>
-              <li class="fragment">Continuous Delivery (CD)</li>
+              <li class="">Continuous Integration (<span class="devops">CI</span>)</li>
+              <li class="fragment">Continuous Delivery (<span class="devops">CD</span>)</li>
               <li class="fragment">Microservices</li>
-              <li class="fragment">Infrastructure as Code</li>
+              <li class="fragment">Infrastructure as Code (<span class="devops">IaC</span>)</li>
               <li class="fragment">Monitoring and Logging</li>
               <li class="fragment">Communication and Collaboration</li>
               <li class="fragment">Continuous feedback</li>
@@ -250,7 +291,7 @@
 
         <section>
           <section>
-            <h1>Dream setup</h1>
+            <h1>Dream setup 💭</h1>
             <h2 class="fragment">My <span class="gold">gold</span> standard</h2>
             <h2 class="fragment">Real world different</h2>
           </section>
@@ -265,24 +306,27 @@
           <section>
             <h1>Trunk-Based</h1>
             <h1 class="fragment">Main branch only</h1>
-            <h1 class="fragment">Short lived branch</h1>
-            <h1 class="fragment">Main is stable</h1>
+            <h1 class="fragment">Short lived branching</h1>
+            <h1 class="fragment">Main is <span class="stonewall">stable</span></h1>
           </section>
           <section>
             <h1>Pull request gate 🛑</h1>
             <h2 class="fragment">Potentially shippable software</h2>
             <h1 class="fragment">Feature flags</h1>
-            <h1 class="fragment">Lost of checks ✔️</h1>
+            <h1 class="fragment">Lots of checks ✔️</h1>
             <h1 class="fragment">Deploy Previews</h1>
             <!-- Lots of auto checks on PR (unit, Cypress (e2e))
             Deploy PR to temp staging enviorment for visuall cheks (automaticly)
             Each PR is reviewed for code quality AND bugs + design -->
           </section>
           <section>
+            <img src="img/deploy-preview-workflow.gif" alt="">
+          </section>
+          <section>
             <h1>Directly to prod 🏭</h1>
             <h2 class="fragment">Merge when <i>everyone</i> is happy</h2>
             <h1 class="fragment">Automatic</h1>
-            <h1 class="fragment">Github Actions</h1>
+            <h1 class="fragment github-actions">Github Actions</h1>
             <!-- TODO scr sht -->
           </section>
           <section>
@@ -295,8 +339,8 @@
           </section>
           <section>
             <h1>Cloud & Serverless</h1>
-            <h2 class="fragment">Infrastructure as Code (IaC)</h2>
-            <h2 class="fragment">Infrastructure as a service (IaaS)</h2>
+            <h2 class="fragment">Infrastructure as Code (<span class="devops">IaC</span>)</h2>
+            <h2 class="fragment">Infrastructure as a service (<span class="devops">IaaS</span>)</h2>
           </section>
           <section>
             <h1 class="trust">Trust</h1>
@@ -322,7 +366,7 @@
           <h2 class="fragment">Some benefits are not obvious</h2>
           <h2 class="fragment">Can be overwhelming</h2>
           <!-- <h2 class="fragment">Don't know fully what works</h2> -->
-          <h2 class="fragment">Will not fix a toxic company, or culture</h2>
+          <h2 class="fragment">Will not fix a <span class="error">toxic</span> company, or culture</h2>
         </section>
         <!-- 
         <section>
