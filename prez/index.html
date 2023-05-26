@@ -113,6 +113,7 @@
     <div class="reveal">
       <div class="slides">
         <!-- https://bennettfeely.com/clippy/ -->
+        <section data-background="../thum1.png"></section>
 
         <section>
           <!-- <div class="fragment addClassBelow" data-add-class="zoom-in-fast">
@@ -300,9 +301,6 @@
             </h3>
           </section>
           <section>
-            <!-- <h1>
-              Summary
-            </h1> -->
             <ol>
               <li class="">
                 Continuous Integration (<span class="devops">CI</span>)
@@ -318,6 +316,17 @@
               <li class="fragment">Communication and Collaboration</li>
               <li class="fragment">Continuous feedback</li>
             </ol>
+          </section>
+
+          <section>
+            <h1>Continuous <span class="devops">Delivery</span></h1>
+            <h2 class="fragment" data-fragment-index="2">
+              Automated deployment, mostly
+            </h2>
+            <h1 class="fragment" data-fragment-index="1">
+              Continuous <span class="devops">Deployment</span>
+            </h1>
+            <h2 class="fragment">Fully automated deployment</h2>
           </section>
         </section>
 
@@ -348,19 +357,33 @@
               Main is <span class="stonewall">stable</span>
             </h1>
           </section>
-          <section>
+          <section data-auto-animate>
             <h1>Pull request <span class="castle">gate</span> 🛑</h1>
             <h2 class="fragment">Potentially shippable software</h2>
             <h2 class="fragment">Feature flags 🏴‍☠️</h2>
             <h2 class="fragment">Lots of checks ✔️</h2>
 
-            <h1 class="fragment">Deploy Previews</h1>
+            <h1 class="fragment">
+              Deployment <span class="devops">Previews</span>
+            </h1>
             <!-- Lots of auto checks on PR (unit, Cypress (e2e))
             Deploy PR to temp staging enviorment for visuall cheks (automaticly)
             Each PR is reviewed for code quality AND bugs + design -->
           </section>
+          <section data-auto-animate>
+            <h1 class="">Deployment <span class="devops">Previews</span></h1>
+            <h2 class="fragment">Auto-deploy every PR</h2>
+            <h2 class="fragment">
+              Own <span class="devops">environment</span>
+            </h2>
+          </section>
+          <section data-background="img/vercel preview1.png"></section>
           <section>
-            <img src="img/deploy-preview-workflow.gif" alt="" />
+            <a
+              href="https://curious-programming-git-test-jgh153.vercel.app/"
+              target="_blank"
+              >https://curious-programming-git-test-jgh153.vercel.app/</a
+            >
           </section>
           <section>
             <h1>Directly to prod 🏭</h1>
@@ -480,6 +503,173 @@
               solving problems. The focus should be on providing the most value
               for the users. Take a pragmatic approach.
             </blockquote>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1 class="big-size">In <span class="success">practice</span></h1>
+          </section>
+          <section data-background="img/next.png"></section>
+          <section data-auto-animate>
+            <h1>Next.js</h1>
+            <h2 class="fragment">Frontend framework for React</h2>
+            <h2 class="fragment">Production</h2>
+            <h2 class="fragment">Local development</h2>
+            <!-- <h2 class="fragment">Vercel</h2>
+            <h2 class="fragment docker">Docker</h2> -->
+          </section>
+          <section>
+            <h1>Local development</h1>
+            <h2 class="fragment">Platform independent</h2>
+            <h2 class="fragment">Don't use docker</h2>
+            <h2 class="fragment">Slower development</h2>
+            <h2 class="fragment">Last resort</h2>
+          </section>
+          <!-- TODO more? -->
+
+          <section>
+            <h1 class="big-size">Production</h1>
+            <h1 class="fragment">Docker</h1>
+            <h1 class="fragment">Vercel</h1>
+          </section>
+          <section data-background="img/docker.png"></section>
+          <section>
+            <h1>Docker</h1>
+            <h2 class="fragment">Virtual OS</h2>
+            <h2 class="fragment">Linux</h2>
+            <h2 class="fragment">Faster than virtual machines</h2>
+            <h2 class="fragment">Images (recipes) create containers</h2>
+            <!-- <h2 class="fragment">Containerization</h2>
+            <h2 class="fragment">Production parity</h2>
+            <h2 class="fragment">Isolation</h2>
+            <h2 class="fragment">Reproducibility</h2>
+            <h2 class="fragment">Portability</h2> -->
+          </section>
+          <section data-background="img/dockerfile.png"></section>
+          <section>
+            <h1>Made for linux</h1>
+            <h2 class="fragment">Using linxu kenel process isolation</h2>
+            <h2 class="fragment">WSL on windows</h2>
+            <h2 class="fragment">Hypervisor on Mac</h2>
+          </section>
+          <section>
+            <h1>Why Docker?</h1>
+            <h2 class="fragment">Same enviorment</h2>
+            <h2 class="fragment">Independent versions</h2>
+            <h2 class="fragment">Share enviorment</h2>
+            <h1 class="fragment">Total overkill</h1>
+          </section>
+          <section>
+            <h1>Platform as a service</h1>
+            <h2 class="fragment">
+              Making <span class="devops">applications</span>, not
+              <span class="error">servers</span>
+            </h2>
+            <h2 class="fragment">Vercel</h2>
+            <h2 class="fragment">Same company as Next</h2>
+          </section>
+          <section data-background="img/vercel.png"></section>
+          <section>
+            <h1>What is vercel?</h1>
+            <h2 class="fragment">Platform as a service</h2>
+            <h2 class="fragment">Auto deploy from Github</h2>
+            <h2 class="fragment">Fully managed</h2>
+            <h2 class="fragment">Free tier</h2>
+          </section>
+          <section data-background="img/vercel-deploy.png"></section>
+
+          <section>
+            <ol>
+              <li class="">
+                Continuous Integration (<span class="devops">CI</span>)
+              </li>
+              <li class="">
+                Continuous Delivery (<span class="devops">CD</span>)
+              </li>
+              <li class="">Microservices</li>
+              <li class="">
+                Infrastructure as Code (<span class="devops">IaC</span>)
+              </li>
+              <li class="">Monitoring and Logging</li>
+              <li class="">Communication and Collaboration</li>
+              <li class="">Continuous feedback</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>Continuous Integration (<span class="devops">CI</span>)</h2>
+            <h2 class="fragment">Write code</h2>
+            <h2 class="fragment">Cypress tests</h2>
+            <h2 class="fragment">Make PR</h2>
+            <h2 class="fragment">Vercel Deployment preview</h2>
+          </section>
+
+          <section data-background="img/deploy-pw.png"></section>
+
+          <section>
+            <h2>Continuous Delivery (<span class="devops">CD</span>)</h2>
+            <h2 class="fragment">Merge and auto-deploy</h2>
+          </section>
+
+          <section data-background="img/deploy-vercel.png"></section>
+
+          <section>
+            <h1>Microservices</h1>
+            <h2 class="fragment">Next.js Serverless Functions</h2>
+            <h2 class="fragment">Deployed automatically</h2>
+          </section>
+
+          <section data-background="img/serverless-f.png"></section>
+          <section data-background="img/deployed-function.png"></section>
+
+          <section>
+            <h2>Infrastructure as Code (<span class="devops">IaC</span>)</h2>
+            <h2 class="fragment">Handled by Vercel</h2>
+            <h2 class="fragment">Framework-defined infrastructure (FdI)</h2>
+            <h2 class="fragment">Zero config needed</h2>
+          </section>
+
+          <section>
+            <h1>Monitoring and Logging</h1>
+            <h2 class="fragment">Vercel dashboard</h2>
+            <h2 class="fragment">LogRocket</h2>
+          </section>
+
+          <section data-background="img/logs.png"></section>
+          <section data-background="img/logrocket2.png"></section>
+
+          <section>
+            <h1>Communication and Collaboration</h1>
+            <h2 class="fragment">Slack</h2>
+            <h2 class="fragment">Jira</h2>
+          </section>
+
+          <section>
+            <h1>Continuous feedback</h1>
+            <h2 class="fragment">Own talk</h2>
+            <h2 class="fragment">LogRocket</h2>
+            <h2 class="fragment">Find out whats popular</h2>
+            <h2 class="fragment">Find out whats broken</h2>
+          </section>
+
+          <section>
+            <h1>In short</h1>
+            <h2 class="fragment">Don't use anything locally</h2>
+            <h2 class="fragment">Don't use docker</h2>
+            <h2 class="fragment">Use a PaaS like Vercel</h2>
+            <h2 class="fragment">
+              Making <span class="devops">applications</span>, not
+              <span class="error">servers</span>
+            </h2>
+          </section>
+
+          <section>
+            <h1>Alternatives</h1>
+            <h2 class="fragment netlify">Netlify</h2>
+            <h2 class="fragment firebase">Firebase</h2>
+            <h2 class="fragment amplify">AWS Amplify</h2>
+            <h2 class="fragment heroku">Heroku</h2>
           </section>
         </section>
 

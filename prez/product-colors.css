@@ -174,7 +174,7 @@
 }
 
 .devops {
-  /* https://www.color-hex.com/color-palette/30628 */ 
+  /* https://www.color-hex.com/color-palette/30628 */
   color: #6293c9 !important;
 }
 
@@ -209,13 +209,71 @@
   color: #61df26 !important;
 }
 .logrocket {
-  color: #754ABC !important;
+  color: #754abc !important;
 }
 .docker {
-  color: #2392E6 !important;
+  color: #2392e6 !important;
 }
 
 .interference,
 .error {
   color: #ff0908 !important;
+}
+
+.jpro {
+  color: #fe7a0c !important;
+}
+.netscape {
+  color: #358189 !important;
+}
+.success {
+  color: #4bb543 !important;
+}
+
+.json {
+  color: #8f719f !important;
+}
+.solid {
+  color: #848484 !important;
+}
+
+.efficiency {
+  color: #f7b500 !important;
+  color: #43bc43 !important;
+}
+
+.ai {
+  color: #f9a825 !important;
+}
+
+.grammarly {
+  color: #34ba96 !important;
+}
+.aof {
+  color: #094c51 !important;
+}
+
+.copilot {
+  background-image: linear-gradient(45deg, #73b4d6, #885de6);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.trunk {
+  color: #5677fc !important;
+}
+
+.netlify {
+  color: #2FB5BB !important;
+}
+
+.amplify {
+  color: #EC7211 !important;
+}
+
+.heroku {
+  color: #79589F !important;
 }
