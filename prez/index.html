@@ -81,7 +81,7 @@
       }
 
       .letter-spacing {
-        letter-spacing: 2rem;
+        letter-spacing: 1rem;
         animation: letter-spacing-ani 1s ease-out forwards;
         animation-iteration-count: 1;
       }
@@ -108,6 +108,7 @@
     <link rel="stylesheet" href="css-ani/blur-in.css" />
     <link rel="stylesheet" href="css-ani/zoom-in-fast.css" />
     <link rel="stylesheet" href="css-ani/pulse-right.css" />
+    <link rel="stylesheet" href="css-ani/shrink.css" />
   </head>
   <body>
     <div class="reveal">
@@ -116,16 +117,28 @@
         <section data-background="../thum1.png"></section>
 
         <section>
-          <!-- <div class="fragment addClassBelow" data-add-class="zoom-in-fast">
+          <h2>The elements of <span class="devops">Dev-Ops</span></h2>
+          <h2 class="fragment"><span class="devops">Dream</span> setup 💭</h2>
+          <h2 class="fragment">
+            <span class="devops">Dev-Ops</span> in practice
+          </h2>
+          <h2 class="fragment">
+            <span class="error">Challenges</span> and alternatives
+          </h2>
+        </section>
+
+        <!-- <section> -->
+        <!-- <div class="fragment addClassBelow" data-add-class="zoom-in-fast">
           </div> -->
-          <h1 class="big-size"><span class="devops">Dev-Ops</span></h1>
-          <h2>Jan Greger Hemb</h2>
-          <h2 class="fragment">What is <span class="devops">Dev-Ops</span>?</h2>
+        <!-- <h1 class="big-size"><span class="">Frontend</span></h1> -->
+        <!-- <h1 class="big-size"><span class="devops">Dev-Ops</span></h1> -->
+        <!-- <h2>Jan Greger Hemb</h2> -->
+        <!-- <h2 class="fragment">What is <span class="devops">Dev-Ops</span>?</h2>
           <h2 class="fragment">
             How does it work in <span class="devops">practice</span>?
-          </h2>
-          <!-- 👨‍💻 + 👷 -->
-        </section>
+          </h2> -->
+        <!-- 👨‍💻 + 👷 -->
+        <!-- </section> -->
 
         <section data-background="img/pondus.jpg"></section>
 
@@ -239,7 +252,14 @@
               Continuous Integration (<span class="devops">CI</span>)
             </h1>
             <h2 class="addClassBelow fragment" data-add-class="letter-spacing">
-              <span>Merge</span> to master/main often
+              <span>Merge</span> to <span class="devops">master</span>/<span
+                class="devops"
+                >main</span
+              >
+              often
+            </h2>
+            <h2 class="fragment">
+              Always <span class="devops">deployable</span>
             </h2>
             <h1 class="fragment">Trunk</h1>
           </section>
@@ -250,8 +270,12 @@
           </section>
           <section data-background="img/deploy.png"></section>
           <section>
-            <h4 class="devops">Microservices</h4>
-            <h2 class="fragment">Many small backend services</h2>
+            <h1 class="devops"><span class="">Microservices</span></h1>
+            <h2 class="fragment addClassBelow" data-add-class="shrink">
+              <span
+                >Many <span class="devops">small</span> backend services</span
+              >
+            </h2>
             <h1 class="fragment">Microfrontends</h1>
             <h1 class="fragment">Still new</h1>
           </section>
@@ -261,7 +285,8 @@
           <section>
             <h1>Infrastructure as Code</h1>
             <h2 class="fragment" style="font-size: 1.5em">
-              Config files + automation of infrastructure
+              Config <span class="devops">files</span> +
+              <span class="devops">automation</span> of infrastructure
             </h2>
             <h1 class="fragment">
               Infrastructure in <span class="git">Git</span>
@@ -334,7 +359,9 @@
           <section>
             <h1>Dream setup 💭</h1>
             <h2 class="fragment">My <span class="gold">gold</span> standard</h2>
-            <h2 class="fragment">Real world is different</h2>
+            <h2 class="fragment">
+              Real world is <span class="error">different</span>
+            </h2>
           </section>
           <section>
             <h1>Hire people you <span class="trust">trust</span></h1>
@@ -347,8 +374,59 @@
             <h1 class="fragment">Accountability</h1>
           </section>
           <section>
+            <h2>
+              <span class="efficiency">Test</span>,
+              <span class="ai">stage</span> and
+              <span class="error">prod</span>
+            </h2>
+            <h2 class="fragment">
+              Autodeploy to <span class="efficiency">test</span>
+            </h2>
+            <h2 class="fragment">
+              Manual deploy to <span class="ai">stage</span>
+            </h2>
+            <h2 class="fragment">
+              Manual deploy from <span class="ai">stage</span> to
+              <span class="error">prod</span>
+            </h2>
+          </section>
+          <section>
+            <img src="img/deploy flow.png" />
+          </section>
+          <section data-auto-animate>
+            <h1>Not great <span class="devops">DevOps</span></h1>
+            <h2 class="fragment">
+              <span class="devops">Master</span> should be production
+            </h2>
+            <h2 class="fragment error">Why?</h2>
+            <h2 class="fragment">
+              <span class="efficiency">Lowest</span> difference between dev &
+              prod
+            </h2>
+            <!-- <h2 class="fragment">How do do that?</h2> -->
+          </section>
+          <section data-auto-animate>
+            <h2 class="">
+              <span class="efficiency">Lowest</span> difference between dev &
+              prod
+            </h2>
+            <h2 class="fragment">
+              Less time to <span class="bug">bugfix</span>
+            </h2>
+            <h2 class="fragment">
+              Less time to <span class="feature">feature</span> feedback
+            </h2>
+            <h2 class="fragment">
+              Less merge <span class="error">conflicts</span>
+            </h2>
+            <h2 class="fragment">
+              No more <span class="bug">fix</span> in production
+            </h2>
+            <h2 class="fragment">How do do that?</h2>
+          </section>
+          <section>
             <h1>Trunk-Based</h1>
-            <h2 class="fragment">Main branch <i>only</i></h2>
+            <h2 class="fragment">Main branch <i class="devops">only</i></h2>
             <h2 class="fragment">Short lived branching</h2>
             <h2 class="fragment">
               Do NOT push <span class="error">directly</span> to Main
@@ -357,6 +435,10 @@
               Main is <span class="stonewall">stable</span>
             </h1>
           </section>
+          <section
+            data-background-iframe="https://trunkbaseddevelopment.com/"
+            data-background-interactive
+          ></section>
           <section data-auto-animate>
             <h1>Pull request <span class="castle">gate</span> 🛑</h1>
             <h2 class="fragment">Potentially shippable software</h2>
@@ -378,16 +460,19 @@
             </h2>
           </section>
           <section data-background="img/vercel preview1.png"></section>
-          <section>
+          <section data-background="img/deploy-pw.png">
             <a
               href="https://curious-programming-git-test-jgh153.vercel.app/"
               target="_blank"
+              style="top: 55vh"
               >https://curious-programming-git-test-jgh153.vercel.app/</a
             >
           </section>
           <section>
             <h1>Directly to prod 🏭</h1>
-            <h2 class="fragment">Merge when <i>everyone</i> is happy</h2>
+            <h2 class="fragment">
+              Merge when <i class="devops">everyone</i> is happy
+            </h2>
             <h1 class="fragment">Automatic</h1>
             <h1 class="fragment github-actions">Github Actions</h1>
             <!-- TODO scr sht -->
@@ -415,6 +500,49 @@
               <span class="fragment">with stubbing</span>
             </h1>
           </section>
+          <section data-auto-animate>
+            <h1><span class="feature">Feature</span> flags 🏴‍☠️</h1>
+            <pre
+              class="fragment"
+            ><code class="typescript" data-trim data-line-numbers="1-3|2">
+if(featureFlags["new-cool-feature"] === true){
+  renderNewCoolFeature();
+} 
+						</code></pre>
+            <h2 class="fragment">
+              Merge before <span class="feature">feature</span> is ready
+            </h2>
+            <h2 class="fragment">
+              <span class="feature">A</span>/<span class="bug">B</span> testing
+            </h2>
+            <h2 class="fragment">
+              <span class="error">Remove</span> when done
+            </h2>
+            <h2 class="fragment">
+              <span class="feature">Feature</span> flag interference
+            </h2>
+          </section>
+          <section data-auto-animate>
+            <h2 class="">
+              <span class="feature">Feature</span> flag interference
+            </h2>
+            <h2 class="fragment">Depend on each other</h2>
+            <h2 class="fragment">
+              Aim to <span class="error">remove</span> all flags in 3 months
+            </h2>
+            <h2 class="fragment">
+              Remove when <span class="feature">feature</span> done
+            </h2>
+          </section>
+          <section>
+            <h1>Start <span class="efficiency">fully</span> automated</h1>
+            <h2 class="fragment">
+              Scale <span class="error">back</span> as needed
+            </h2>
+            <h2 class="fragment">
+              <span class="efficiency">Predictable</span> deployment system
+            </h2>
+          </section>
           <section>
             <h1>Documentation 📝</h1>
             <h2 class="fragment">
@@ -434,7 +562,9 @@
           </section>
           <section>
             <h1>Monitor production 🕵️</h1>
-            <h2 class="fragment">Influence future development</h2>
+            <h2 class="fragment">
+              Influence <span class="devops">future</span> development
+            </h2>
             <h1 class="fragment logrocket">LogRocket</h1>
           </section>
           <section data-background="img/logrocket1.png"></section>
@@ -458,6 +588,9 @@
             </h2>
             <h2 class="fragment">
               Infrastructure as a service (<span class="devops">IaaS</span>)
+            </h2>
+            <h2 class="fragment">
+              Platform as a service (<span class="devops">PaaS</span>)
             </h2>
             <h2 class="fragment">
               Making <span class="devops">applications</span>, not
@@ -513,55 +646,93 @@
           <section data-background="img/next.png"></section>
           <section data-auto-animate>
             <h1>Next.js</h1>
-            <h2 class="fragment">Frontend framework for React</h2>
+            <h2 class="fragment">
+              Frontend framework for <span class="react">React</span>
+            </h2>
+            <h2 class="fragment">
+              Requires a <span class="devops">server</span>
+            </h2>
             <h2 class="fragment">Production</h2>
-            <h2 class="fragment">Local development</h2>
+            <h1 class="fragment">Local development</h1>
             <!-- <h2 class="fragment">Vercel</h2>
             <h2 class="fragment docker">Docker</h2> -->
           </section>
-          <section>
+          <section data-auto-animate>
             <h1>Local development</h1>
-            <h2 class="fragment">Platform independent</h2>
-            <h2 class="fragment">Don't use docker</h2>
-            <h2 class="fragment">Slower development</h2>
+            <h2 class="fragment">
+              Platform <span class="devops">independent</span>
+            </h2>
+            <h2 class="fragment npm-script">npx create-next-app@latest</h2>
+            <h2 class="fragment npm-script">npm run dev</h2>
+            <h2 class="fragment">
+              Don't use <span class="docker">docker</span>
+            </h2>
+          </section>
+          <section data-auto-animate>
+            <h2 class="">Don't use <span class="docker">docker</span></h2>
+            <h2 class="fragment">
+              <span class="error">Slower</span> development
+            </h2>
+            <h2 class="fragment">More <span class="error">complexity</span></h2>
+            <h2 class="fragment">
+              Hot reloading <span class="error">harder</span>
+            </h2>
+            <h2 class="fragment">
+              Keep it <span class="success">simple</span>
+            </h2>
             <h2 class="fragment">Last resort</h2>
           </section>
           <!-- TODO more? -->
 
           <section>
             <h1 class="big-size">Production</h1>
-            <h1 class="fragment">Docker</h1>
-            <h1 class="fragment">Vercel</h1>
+            <h1 class="fragment docker">Docker</h1>
+            <h1 class="fragment"><span class="devops">PaaS</span> (Vercel)</h1>
           </section>
           <section data-background="img/docker.png"></section>
           <section>
-            <h1>Docker</h1>
+            <h1 class="docker">Docker</h1>
             <h2 class="fragment">Virtual OS</h2>
-            <h2 class="fragment">Linux</h2>
-            <h2 class="fragment">Faster than virtual machines</h2>
-            <h2 class="fragment">Images (recipes) create containers</h2>
-            <!-- <h2 class="fragment">Containerization</h2>
-            <h2 class="fragment">Production parity</h2>
-            <h2 class="fragment">Isolation</h2>
-            <h2 class="fragment">Reproducibility</h2>
-            <h2 class="fragment">Portability</h2> -->
+            <h2 class="fragment linux">Linux</h2>
+            <h2 class="fragment">
+              <span class="devops">Faster</span> than virtual machines
+            </h2>
+            <h2 class="fragment">
+              <span class="devops">Dockerfile</span> create
+              <span class="docker">images</span>
+            </h2>
+            <h2 class="fragment">
+              <span class="docker">Images</span> create
+              <span class="success">containers</span>
+            </h2>
           </section>
           <section data-background="img/dockerfile.png"></section>
+          <section data-background="img/docker-image.png"></section>
+          <section data-background="img/container.png"></section>
           <section>
-            <h1>Made for linux</h1>
-            <h2 class="fragment">Using linxu kenel process isolation</h2>
-            <h2 class="fragment">WSL on windows</h2>
-            <h2 class="fragment">Hypervisor on Mac</h2>
+            <h1>Made for <span class="linux">linux</span></h1>
+            <h2 class="fragment">
+              Using <span class="linux">linux</span> kernel process isolation
+            </h2>
+            <h2 class="fragment">
+              WSL on <span class="windows">Windows</span>
+            </h2>
+            <h2 class="fragment">Hypervisor on <span class="mac">Mac</span></h2>
           </section>
           <section>
-            <h1>Why Docker?</h1>
-            <h2 class="fragment">Same enviorment</h2>
+            <h1>Why <span class="docker">Docker</span>?</h1>
+            <h2 class="fragment">
+              Same <span class="devops">environment</span>
+            </h2>
             <h2 class="fragment">Independent versions</h2>
-            <h2 class="fragment">Share enviorment</h2>
-            <h1 class="fragment">Total overkill</h1>
+            <h2 class="fragment">Scalability</h2>
+            <h2 class="fragment">
+              Share <span class="devops">environment</span>
+            </h2>
+            <h1 class="fragment">Total <span class="error">overkill</span></h1>
           </section>
           <section>
-            <h1>Platform as a service</h1>
+            <h1 class="devops">Platform as a service</h1>
             <h2 class="fragment">
               Making <span class="devops">applications</span>, not
               <span class="error">servers</span>
@@ -572,12 +743,19 @@
           <section data-background="img/vercel.png"></section>
           <section>
             <h1>What is vercel?</h1>
-            <h2 class="fragment">Platform as a service</h2>
-            <h2 class="fragment">Auto deploy from Github</h2>
+            <h2 class="fragment devops">Platform as a service</h2>
+            <h2 class="fragment">
+              Auto deploy from <span class="devops">Github</span>
+            </h2>
+            <h2 class="fragment">
+              On push to <span class="stable">main</span>
+            </h2>
             <h2 class="fragment">Fully managed</h2>
-            <h2 class="fragment">Free tier</h2>
+            <h2 class="fragment"><span class="success">Free</span> tier</h2>
           </section>
+          <section data-background="img/new project vercel.png"></section>
           <section data-background="img/vercel-deploy.png"></section>
+          <section data-background="img/cp.png"></section>
 
           <section>
             <ol>
@@ -599,25 +777,34 @@
 
           <section>
             <h2>Continuous Integration (<span class="devops">CI</span>)</h2>
-            <h2 class="fragment">Write code</h2>
-            <h2 class="fragment">Cypress tests</h2>
-            <h2 class="fragment">Make PR</h2>
-            <h2 class="fragment">Vercel Deployment preview</h2>
+            <h2 class="fragment">Write code ✏️</h2>
+            <h2 class="fragment">Cypress tests 🤖</h2>
+            <h2 class="fragment">Make <span class="devops">PR</span> 📝</h2>
+            <h2 class="fragment">
+              Vercel <span class="devops">Deployment preview</span>
+            </h2>
           </section>
 
+          <section data-background="img/vercel preview1.png"></section>
           <section data-background="img/deploy-pw.png"></section>
 
           <section>
             <h2>Continuous Delivery (<span class="devops">CD</span>)</h2>
-            <h2 class="fragment">Merge and auto-deploy</h2>
+            <h2 class="fragment">
+              Merge and <span class="devops">auto-deploy</span>
+            </h2>
           </section>
 
           <section data-background="img/deploy-vercel.png"></section>
 
           <section>
-            <h1>Microservices</h1>
-            <h2 class="fragment">Next.js Serverless Functions</h2>
-            <h2 class="fragment">Deployed automatically</h2>
+            <h1 class="devops">Microservices</h1>
+            <h2 class="fragment">
+              Next.js <span class="devops">Serverless</span> Functions
+            </h2>
+            <h2 class="fragment">
+              Deployed <span class="devops">automatically</span>
+            </h2>
           </section>
 
           <section data-background="img/serverless-f.png"></section>
@@ -626,14 +813,26 @@
           <section>
             <h2>Infrastructure as Code (<span class="devops">IaC</span>)</h2>
             <h2 class="fragment">Handled by Vercel</h2>
-            <h2 class="fragment">Framework-defined infrastructure (FdI)</h2>
-            <h2 class="fragment">Zero config needed</h2>
+            <h2 class="fragment">
+              Framework-defined infrastructure (<span class="devops">FdI</span>)
+            </h2>
+            <h2 class="fragment">
+              <span class="devops">Serverless</span> Functions
+            </h2>
+            <h2 class="fragment">
+              <span class="success">Zero</span> config needed
+            </h2>
           </section>
 
           <section>
             <h1>Monitoring and Logging</h1>
             <h2 class="fragment">Vercel dashboard</h2>
-            <h2 class="fragment">LogRocket</h2>
+            <img
+              class="fragment"
+              style="max-height: 200px"
+              src="img/vercel-log.png"
+            />
+            <h2 class="fragment logrocket">LogRocket</h2>
           </section>
 
           <section data-background="img/logs.png"></section>
@@ -641,23 +840,31 @@
 
           <section>
             <h1>Communication and Collaboration</h1>
-            <h2 class="fragment">Slack</h2>
-            <h2 class="fragment">Jira</h2>
+            <h1 class="fragment slack">Slack</h1>
+            <h1 class="fragment jira">Jira</h1>
           </section>
 
           <section>
             <h1>Continuous feedback</h1>
-            <h2 class="fragment">Own talk</h2>
-            <h2 class="fragment">LogRocket</h2>
-            <h2 class="fragment">Find out whats popular</h2>
-            <h2 class="fragment">Find out whats broken</h2>
+            <h2 class="fragment">Own talk 🎙️</h2>
+            <h2 class="fragment logrocket">LogRocket</h2>
+            <h2 class="fragment">
+              Find out whats <span class="success">popular</span>
+            </h2>
+            <h2 class="fragment">
+              Find out whats <span class="error">broken</span>
+            </h2>
           </section>
 
           <section>
             <h1>In short</h1>
             <h2 class="fragment">Don't use anything locally</h2>
-            <h2 class="fragment">Don't use docker</h2>
-            <h2 class="fragment">Use a PaaS like Vercel</h2>
+            <h2 class="fragment">
+              Don't use <span class="docker">docker</span>
+            </h2>
+            <h2 class="fragment">
+              Use a <span class="devops">PaaS</span> like Vercel
+            </h2>
             <h2 class="fragment">
               Making <span class="devops">applications</span>, not
               <span class="error">servers</span>
@@ -677,7 +884,9 @@
           <h1>Challenges of <span class="devops">Dev-Ops</span></h1>
           <!-- <h3 class="fragment">Each element is not as important as the rest</h3> -->
           <h2 class="fragment">Some benefits are not obvious</h2>
-          <h2 class="fragment">Can be overwhelming</h2>
+          <h2 class="fragment">
+            Can be <span class="error">overwhelming</span>
+          </h2>
           <!-- <h2 class="fragment">Don't know fully what works</h2> -->
         </section>
         <section>
@@ -764,8 +973,12 @@
 
         <section>
           <h1>Ready to go 🚀</h1>
-          <h1 class="fragment">Thanks for listening!</h1>
-          <h1 class="fragment">Curious Programming 📺</h1>
+          <h1 class="fragment">
+            <span class="devops">Thanks</span> for listening!
+          </h1>
+          <h2 class="fragment">Jan <span class="devops">Greger</span> Hemb</h2>
+          <h2 class="fragment jpro">JProfessionals</h2>
+          <h1 class="fragment">Curious Programming📺</h1>
           <!-- <h1 class="fragment">Leave a comment</h1> -->
         </section>
         <section data-background="../thum1.png"></section>

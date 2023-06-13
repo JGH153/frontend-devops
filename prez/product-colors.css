@@ -277,3 +277,23 @@
 .heroku {
   color: #79589F !important;
 }
+
+.jira {
+  color: #2684FF !important;
+}
+
+.linux {
+  color: #F5BE04 !important;
+}
+
+.windows {
+  color: #0084DC !important;
+}
+
+.mac {
+  color: #999999 !important;
+}
+
+.stable {
+  color: #808080 !important;
+}

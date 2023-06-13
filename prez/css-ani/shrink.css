@@ -1,0 +1,13 @@
+.shrink {
+	animation: shrink-ani 4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink-ani {
+  0% {
+    font-size: 100%;
+  }
+  100% {
+    font-size: 60%;
+  }
+}

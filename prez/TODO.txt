@@ -1,2 +1,11 @@
 TODO
-prefect team composition
+improve docker intro (Images (recipes) create containers)	
+
+more on Trunk-Based Development
+
+fix Pull request gate
+and Deployment Previews -> enviorments
+
+Cloud & Serverless -> add PaaS?
+
+after vercel demo img (file:///C:/Users/jangr/Documents/frontend-devops/prez/index.html#/8/17) -> img of production?
